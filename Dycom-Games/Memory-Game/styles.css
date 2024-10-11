@@ -1,0 +1,197 @@
+*{
+    font-family: 'Poppins';
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    background-color: darkolivegreen;
+    color: white;
+}
+
+#menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: darkolivegreen;
+    border-bottom: 1px solid white;
+    font-size: 24px;
+}
+
+#score{
+    margin: 0 20px 0 0;
+}
+
+#moves{
+    font-weight: bold;
+}
+
+#difficulty{
+  padding: 5px 5px;
+  margin: 0 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+}
+
+#difficulty option{
+    padding: 5px;
+}
+
+#reset, #playButton, #replay{
+    padding: 7px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#reset:hover, #playButton:hover, #replay:hover{
+    background-color: #0056b3;
+}
+
+#gameboard{
+    display: grid;
+    justify-content: center;
+    grid-gap: 16px;
+    grid-template-columns: repeat(6, 140px);
+}
+
+.card{
+    width: 140px;
+    height: 140px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+}
+
+.card.flipped{
+    transform: rotateY(180deg);
+}
+
+.front, .back{
+    backface-visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.card .front{
+    transform: rotateY(180deg);
+}
+
+.card .back{
+    background-image: url("https://media.licdn.com/dms/image/D4E0BAQFY8X6cAiHwzw/company-logo_200_200/0/1710170398314/dycom_industries_logo?e=2147483647&v=beta&t=D7jFnWoiVBvDvwxTCmd21mISQqym09BEeocIS4jFUdk");
+    background-position: center center;
+    background-size: cover;
+    backface-visibility: hidden;
+}
+
+.card.front{
+    transform: rotateY(180deg);
+    
+}
+
+.card img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.popup{
+    display: none;
+    position: fixed;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.popup-content, #win-screen-content{
+    text-align: center;
+    font-size: smaller;
+}
+
+#name{
+    height: 10px;
+    text-align: center;
+    width: 150px; 
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px; 
+}
+
+#name:focus {
+    outline: none;
+    border-color: #007bff; 
+}
+
+#win-screen{
+    display: none;
+    position: fixed;
+    height: 300px;
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 767px) {
+    body {
+        font-size: 16px; 
+    }
+    #menu {
+        font-size: 20px; 
+    }
+    #gameboard {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 8px;
+        overflow-y: auto;
+
+    }
+    .card {
+        width: 80px; 
+        height: 80px;
+    }
+    .popup {
+        width: 90%;
+        height: 80%;
+        overflow-y: auto;
+    }
+    .popup-content, #win-screen-content {
+        font-size: smaller; 
+        overflow-y: auto;
+    }
+    #win-screen {
+        height: auto;
+        width: 250px; 
+        padding: 10px; 
+    }
+    #moves{
+        margin: 28px;
+    }
+}
+
+
+
+
+
+

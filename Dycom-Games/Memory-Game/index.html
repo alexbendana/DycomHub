@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <meta name="description" content="">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Chango&family=Open+Sans&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Strike&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        
+    </head>
+    <body>
+        <div id ="popup" class="popup">
+            <div class="popup-content">
+            <h2>Dycom Memory Game</h2>
+            <p>Instructions
+                <br><br>
+                Goal:
+                <br><br>
+                Your goal is to match all the cards on the board in the fewest number of tries.
+                <br><br>
+                How to Play:
+                <br><br>
+                Click on a card to reveal its image.
+                Click on another card to reveal its image.
+                If the images match, the cards will remain face up.
+                If the images don't match, the cards will flip back over. Remember their positions for future turns.
+                Keep matching pairs until all cards are face up.
+                <br><br>
+                Difficulty Levels:
+                <br><br>
+                Choose your preferred difficulty level: Easy, Medium, or Hard.
+                Each difficulty level determines the number of cards on the board.
+                Harder levels have more cards, making the game more challenging.
+                <br><br>
+                Leaderboard:
+                <br><br>
+                Optionally, you can enter your name before starting the game.
+                Your name will be displayed on the leaderboard if you achieve a high score.
+                Compete with friends and colleagues to see who can complete the game with the fewest tries!
+                <br><br>
+                Start Game:
+                <br><br>
+                Click the "Play" button to begin playing after selecting your difficulty level.
+                Have fun and enjoy testing your memory skills with Dycom's Memory Game!
+            </p>
+            <label for="name">Enter Your Name</label>
+            <input type="text" id="name" placeholder="Optional">
+            <br>
+            <button id="playButton">Play</button>
+            <br>
+            
+            </div>
+        </div>
+        
+        <div id="menu">
+            <p id="score">Moves: <span id="moves">0</span></p>
+            <label for="difficulty">Select a difficulty:</label>
+            <select id="difficulty">
+                <option selected>Easy</option>
+                <option>Medium</option>
+                <option>Hard</option>
+            </select>
+            <button id="reset">Reset</button>
+        </div>
+
+        <div id="gameboard">
+            
+        </div>
+        
+
+        <div id="win-screen">
+            <div id="win-screen-content">
+            <h2>You Won!</h2>
+            <p>Play Again?</p>
+            <button id="replay">Replay</button>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="script.js" async defer></script>
+    </body>
+</html>

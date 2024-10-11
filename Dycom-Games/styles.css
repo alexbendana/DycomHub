@@ -1,0 +1,88 @@
+:root{
+    --darkreader-neutral-background: #141617;
+    --darkreader-neutral-text: #e3dfd9;
+    --darkreader-selection-background: #0051b3;
+    --darkreader-selection-text: #f4f2ee;
+}
+
+*{
+    font-family: 'Poppins';
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    background-color: darkolivegreen;
+    color: white;
+}
+
+#heading{
+    font-size: 3em;
+    margin: 0;
+    text-align: center;
+}
+
+#game-container{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    
+    margin-top: 10px;
+    padding: 0 5vw;
+}
+
+.card{
+    border-radius: 12px;
+    border: solid 1px #141414;
+    background: #e3dfd9;
+    text-align: center;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    padding: 30px;
+    height: 300px;
+    width: 250px;
+    margin-right: 12px;
+    flex-wrap: nowrap;
+    height: 100%;
+}
+
+.card-title{
+    font-weight: bold;
+    color: #141414;
+}
+
+.game-description{
+    color: #959595;
+}
+
+.card-play-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    font-size: 16px;
+    line-height: 20.8px;
+    border-radius: 44px;
+    letter-spacing: .25px;
+    height: 44px;
+    color: #333;
+    border: 1px solid #141414;
+    font-weight: 700;
+}
+
+.card-picture{
+    width: 100px;
+    height: 100px
+}
+
+a{
+    text-decoration: none;
+}
